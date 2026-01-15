@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
-from database import get_db
+from .database import get_db
 from backend.models import Product 
 from backend import schemas 
 

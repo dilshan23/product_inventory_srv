@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
-from database import get_db
+from .database import get_db
 from backend.services import LogisticsService
 from backend.models import Order, OrderStatus
 from backend import schemas 
