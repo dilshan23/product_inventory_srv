@@ -14,7 +14,7 @@ This service manages a product catalog and customer orders using **FastAPI**, **
 Run this command from the project root (where `docker-compose.yml` is located):
 
 ```bash
-docker-compose up --builds
+docker-compose up --build
 ```
 
 ### 3. Access the Service
@@ -39,6 +39,7 @@ docker exec -it logistics_api alembic revision --autogenerate -m "Describe your 
 Manually Apply Migrations
 If you need to force an upgrade without restarting the container:
 
-Bash
 
+```bash
 docker exec -it logistics_api alembic upgrade head
+```
