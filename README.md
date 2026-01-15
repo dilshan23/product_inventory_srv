@@ -24,6 +24,15 @@ Alternative Docs (ReDoc): http://localhost:8000/redoc
 
 Health Check: http://localhost:8000/
 
+### 4. How to Run the Tests
+Run these inside the running Docker container so they have access to the PostgreSQL database.
+
+Run this command from your host terminal:
+
+
+```bash
+docker exec -it logistics_api pytest backend/tests/test_orders.py
+```
 
 ### 🛠 Database Migrations (Alembic)
 The service automatically applies migrations to the latest version (upgrade head) every time the containers start.
