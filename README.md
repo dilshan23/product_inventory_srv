@@ -56,4 +56,4 @@ docker exec -it logistics_api alembic upgrade head
 
 ### ToDo
 
-Forntend : only boilarpalte code yet
+Forntend : only boilerplate code yet
