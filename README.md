@@ -52,3 +52,8 @@ If you need to force an upgrade without restarting the container:
 ```bash
 docker exec -it logistics_api alembic upgrade head
 ```
+
+
+### ToDo
+
+Forntend : only boilarpalte code yet
