@@ -1,7 +1,8 @@
+from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 from database import get_db
-from backend.services import LogisticsService
-import schemas # Pydantic models
+from backend.models import Product 
+from backend import schemas 
 
 router = APIRouter()
 

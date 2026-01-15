@@ -1,7 +1,9 @@
+from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from database import get_db
 from backend.services import LogisticsService
-import schemas # Pydantic models
+from backend.models import Order, OrderStatus
+from backend import schemas 
 
 router = APIRouter()
 
@@ -15,7 +17,6 @@ def update_status(order_id: int, status: OrderStatus, db: Session = Depends(get_
     if not order:
         raise HTTPException(status_code=404, detail="Order not found")
     
-    # Logic: Cannot ship cancelled orders
     if order.status == OrderStatus.CANCELLED:
         raise HTTPException(status_code=400, detail="Cannot update status of cancelled order")
         
