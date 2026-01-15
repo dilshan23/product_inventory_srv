@@ -1,0 +1,9 @@
+# Ignore dependencies in the frontend folder
+frontend/node_modules/
+
+# Standard Python ignores (for your backend)
+__pycache__/
+*.py[cod]
+.env
+venv/
+.venv/
